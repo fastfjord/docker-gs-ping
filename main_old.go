@@ -1,4 +1,4 @@
-package main
+package main_old
 
 import (
 	"net/http"
@@ -8,7 +8,7 @@ import (
 	"github.com/labstack/echo/v4/middleware"
 )
 
-func main() {
+func main_old() {
 
 	e := echo.New()
 

@@ -1,3 +1,13 @@
 {
-  "cSpell.words": ["buildx"]
+  "cSpell.words": [
+    "buildx",
+    "cenkalti",
+    "cockroachdb",
+    "crdb",
+    "dbname",
+    "PGDATABASE",
+    "PGHOST",
+    "PGUSER",
+    "stretchr"
+  ]
 }

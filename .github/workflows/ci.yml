@@ -34,7 +34,6 @@ jobs:
           key: ${{ runner.os }}-buildx-${{ github.sha }}
           restore-keys: |
             ${{ runner.os }}-buildx-
-          dockerfile: ./docker-gs-ping-roach/Dockerfile
 
       - name: Build Docker image
         uses: docker/build-push-action@v2

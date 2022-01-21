@@ -39,7 +39,6 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           builder: ${{ steps.buildx.outputs.name }}
-          path: docker-gs-ping-roach
           push: false
           load: true
           tags: ${{ github.event.repository.name }}:latest, ${{ github.repository }}:latest

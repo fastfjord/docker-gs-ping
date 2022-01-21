@@ -34,6 +34,7 @@ jobs:
           key: ${{ runner.os }}-buildx-${{ github.sha }}
           restore-keys: |
             ${{ runner.os }}-buildx-
+          dockerfile: ./docker-gs-ping-roach/Dockerfile
 
       - name: Build Docker image
         uses: docker/build-push-action@v2
@@ -44,7 +45,6 @@ jobs:
           tags: ${{ github.event.repository.name }}:latest, ${{ github.repository }}:latest
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
-          dockerfile: ./docker-gs-ping-roach/Dockerfile
 
       - name: Run functional tests
         run: go test -v ./...
